@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Stat Dashboard</title>
+
+<link rel="stylesheet" href="/static/style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📊 Stat Dashboard</h1>
+
+<div class="controls">
+    <textarea id="dados">70,80,90,85,60,75,88</textarea>
+    <br>
+
+    <button onclick="analisar()">Analisar</button>
+
+    <input type="file" id="fileInput">
+
+    <select id="tipoFiltro">
+        <option value="todos">Todos</option>
+        <option value="anime">Anime</option>
+        <option value="filme">Filme</option>
+        <option value="serie">Série</option>
+    </select>
+
+    <button onclick="carregarCatalogo()">Catálogo Local</button>
+    <button onclick="buscarFilmes()">Filmes TMDB</button>
+    <button onclick="buscarSeries()">Séries TMDB</button>
+    <button onclick="buscarAnime()">Top Animes</button>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>Tabela</h3>
+<table>
+<thead>
+<tr>
+<th>Classe</th><th>Fi</th><th>Fa</th><th>Xi</th><th>Fi.Xi</th><th>Fi.Xi²</th>
+</tr>
+</thead>
+<tbody id="tabela"></tbody>
+</table>
+</div>
+
+<div class="card">
+<h3>Medidas</h3>
+<p id="medidas"></p>
+</div>
+
+<div class="card">
+<h3>Histograma + Curva Normal</h3>
+<canvas id="hist"></canvas>
+</div>
+
+<div class="card">
+<h3>Ogiva</h3>
+<canvas id="ogiva"></canvas>
+</div>
+
+</div>
+
+</div>
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>

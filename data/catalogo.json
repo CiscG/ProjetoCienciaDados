@@ -1,0 +1,9 @@
+[
+  {"titulo": "Naruto", "tipo": "anime", "nota": 82},
+  {"titulo": "Breaking Bad", "tipo": "serie", "nota": 95},
+  {"titulo": "Avengers", "tipo": "filme", "nota": 88},
+  {"titulo": "One Piece", "tipo": "anime", "nota": 90},
+  {"titulo": "Dark", "tipo": "serie", "nota": 85},
+  {"titulo": "Interstellar", "tipo": "filme", "nota": 91},
+  {"titulo": "Demon Slayer", "tipo": "anime", "nota": 87}
+]
