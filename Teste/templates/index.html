@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>BioStat Dashboard - Acadêmico</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📊 Estatística Descritiva: Mídia & Games</h1>
+            <p>Trabalho Acadêmico - Coleta de Dados via APIs</p>
+        </header>
+
+        <section class="controls card">
+            <div class="search-box">
+                <input type="text" id="query" placeholder="Pesquisar título (ex: Batman, Naruto)...">
+                <select id="fonte">
+                    <option value="tmdb">Filmes/Séries (TMDB)</option>
+                    <option value="anime">Animes (Jikan)</option>
+                    <option value="jogos">Jogos (IGDB)</option>
+                </select>
+                <button onclick="buscarDados()">🔍 Pesquisar Nome</button>
+            </div>
+
+            <div class="top50-box">
+                <strong>🏆 Top 50 Global:</strong>
+                <select id="fonteTop">
+                    <option value="tmdb">Filmes (TMDB)</option>
+                    <option value="anime">Animes (Jikan)</option>
+                    <option value="jogos">Jogos (IGDB)</option>
+                </select>
+                <select id="agruparPor">
+                    <option value="nota">Analisar por: Notas</option>
+                    <option value="ano">Analisar por: Ano de Lançamento</option>
+                </select>
+                <button class="btn-purple" onclick="buscarTop50()">⚡ Extrair e Analisar</button>
+            </div>
+
+            <div class="export-box">
+                <button class="btn-csv" onclick="exportarCSV()">📥 Exportar CSV</button>
+                <button class="btn-pdf" onclick="exportarPDF()">📄 Gerar Relatório PDF</button>
+            </div>
+        </section>
+
+        <main class="grid">
+            <div class="card">
+                <h3>📋 Tabela de Distribuição de Frequência</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th id="th-classe">Classe (Notas)</th>
+                            <th>fi</th>
+                            <th>fa</th>
+                            <th>xi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela-body"></tbody>
+                </table>
+            </div>
+
+            <div class="card">
+                <h3>📈 Medidas de Resumo</h3>
+                <div id="medidas-stats" class="stats-container">
+                    </div>
+            </div>
+
+            <div class="card">
+                <h3>📊 Histograma</h3>
+                <canvas id="histChart"></canvas>
+            </div>
+
+            <div class="card">
+                <h3>📉 Ogiva de Galton (Acumulada)</h3>
+                <canvas id="ogivaChart"></canvas>
+            </div>
+        </main>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
