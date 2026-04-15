@@ -17,3 +17,48 @@ th, td { border-bottom: 1px solid #e2e8f0; padding: 12px; text-align: center; }
 th { background: #f8fafc; }
 .stats-container { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; font-size: 1.1em; }
 .stat-item { padding: 10px; background: #f1f5f9; border-radius: 8px; }
+:root { --primary: #8b5cf6; --bg: #f8fafc; }
+body { font-family: 'Inter', sans-serif; background: var(--bg); margin: 0; padding: 20px; }
+.container { max-width: 1200px; margin: auto; }
+.card { background: #fff; border-radius: 8px; padding: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 20px; border: 1px solid #e2e8f0; }
+.grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 20px; }
+header { text-align: center; margin-bottom: 30px; }
+/* Nova estrutura de coluna para empilhar Medidas e Auditoria */
+.right-column { display: flex; flex-direction: column; gap: 20px; }
+
+.top-controls { display: flex; gap: 10px; justify-content: center; padding: 10px; }
+.btn-purple { background: var(--primary); color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-weight: bold; }
+
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 12px; text-align: center; border-bottom: 1px solid #f1f5f9; }
+th { background: #f8fafc; color: #475569; }
+
+/* Grid para o quadro de medidas de resumo */
+.stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.stat-item { padding: 12px; background: #f1f5f9; border-radius: 6px; font-size: 0.95em; border-left: 4px solid var(--primary); }
+.stat-item b { color: #334155; margin-right: 4px; }
+
+.table-scroll { max-height: 450px; overflow-y: auto; }
+.full-width { grid-column: 1 / -1; }
+.full-width {
+    grid-column: 1 / -1; /* Ocupa as duas colunas do grid */
+    margin-top: 20px;
+}
+
+.chart-container {
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
+.controlscard {
+    /* Adicione seus estilos aqui */
+    display: flex;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center;     /* Garante que fiquem alinhados verticalmente */
+    gap: 15px;               /* Define o espaçamento entre os elementos */
+    padding: 20px;           /* Espaço interno para não encostar na borda */
+    background: #fff;        /* Fundo branco conforme a imagem */
+    border-radius: 8px;      /* Bordas arredondadas */
+    border: 1px solid #e2e8f0; /* Borda suave */
+    width: 100%;             /* Garante que o card ocupe a largura total */
+}
