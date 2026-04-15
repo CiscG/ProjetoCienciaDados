@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>BioStat Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📊 BioStat: Dashboard Acadêmico</h1>
+            <div class="top-controls card">
+                <select id="fonteTop">
+                    <option value="anime">Animes (Jikan)</option>
+                    <option value="tmdb">Filmes (TMDB)</option>
+                </select>
+                <select id="agruparPor">
+                    <option value="nota">Analisar por: Notas</option>
+                    <option value="ano">Analisar por: Anos</option>
+                </select>
+                <button onclick="buscarTop50()" class="btn-purple">⚡ Extrair e Analisar</button>
+            </div>
+        </header>
+
+        <main class="grid">
+            <div class="card">
+                <h3>📋 Tabela de Frequência</h3>
+                <table>
+                    <thead><tr><th>Classe</th><th>fi</th><th>fa</th><th>xi</th></tr></thead>
+                    <tbody id="tabela-body"></tbody>
+                </table>
+            </div>
+
+            <div class="right-column">
+                <div class="card">
+                    <h3>📈 Medidas de Resumo</h3>
+                    <div id="medidas-stats" class="stats-grid"></div>
+                </div>
+
+                <div class="card">
+                    <h3>🔍 Lista de Auditoria (n=50)</h3>
+                    <div class="table-scroll">
+                        <table id="tabela-auditoria">
+                            <thead><tr><th>Título</th><th>Nota</th><th>Ano</th></tr></thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
