@@ -9,8 +9,8 @@
 <body>
     <div class="container">
         <header>
-            <h1>📊 BioStat: Auditoria de Dados</h1>
-            <p>Verificação de APIs e Distribuição de Frequência</p>
+            <h1>📊 BioStat: Estatística Descritiva de Mídia</h1>
+            <p>Trabalho Acadêmico - Coleta de Dados via APIs</p>
         </header>
 
         <section class="card controls">
@@ -30,18 +30,34 @@
                 <h3>📋 Tabela de Classes (fi/fa)</h3>
                 <table id="tabela-classes">
                     <thead><tr><th>Classe</th><th>fi</th><th>fa</th><th>xi</th></tr></thead>
-                    <tbody></tbody>
+                    <tbody id="tabela-body"></tbody>
                 </table>
             </div>
 
-            <div class="card">
-                <h3>🔍 Lista de Auditoria (Os 50 Itens)</h3>
-                <div class="table-scroll">
-                    <table id="tabela-auditoria">
-                        <thead><tr><th>Título</th><th>Nota</th><th>Ano</th></tr></thead>
-                        <tbody></tbody>
-                    </table>
+            <div class="right-column">
+                <div class="card">
+                    <h3>📈 Medidas de Resumo</h3>
+                    <div id="medidas-stats" class="stats-grid">
+                        </div>
                 </div>
+
+                <div class="card">
+                    <h3>🔍 Lista de Auditoria (Os 50 Itens)</h3>
+                    <div class="table-scroll">
+                        <table id="tabela-auditoria">
+                            <thead><tr><th>Título</th><th>Nota</th><th>Ano</th></tr></thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="card full-width">
+                    <h3>📉 Ogiva de Galton (Acumulada)</h3>
+                    <div style="height: 300px;">
+                        <canvas id="ogivaChart"></canvas>
+                    </div>
+                </div>
+
             </div>
 
             <div class="card full-width">

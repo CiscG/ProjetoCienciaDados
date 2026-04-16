@@ -1,3 +1,4 @@
+<<<<<<< HEAD:Teste1/static/script.js
 <<<<<<< HEAD
 let chartHist, chartOgiva;
 let estatisticasGlobais = null;
@@ -141,6 +142,8 @@ function exportarPDF() {
 let chartH;
 let chartO; // Variável global para controlar o gráfico da Ogiva
 
+=======
+>>>>>>> 933367b (projeto finalizado):VersãoAntiga/static/script.js
 async function buscarTop50() {
     const btn = document.querySelector(".btn-purple");
     const fonte = document.getElementById("fonteTop").value;
@@ -172,14 +175,14 @@ function renderUI(r) {
         `<tr><td>${c[0]} |- ${c[1]}</td><td>${r.fi[i]}</td><td>${r.fa[i]}</td><td>${r.xi[i]}</td></tr>`
     ).join("");
 
-    // Quadro de Medidas de Resumo
+    // Quadro de Medidas
     document.getElementById("medidas-stats").innerHTML = `
         <div class="stat-item"><b>Média:</b> ${r.media}</div>
         <div class="stat-item"><b>Desvio Padrão:</b> ${r.dp}</div>
-        <div class="stat-item"><b>Variância:</b> ${r.variancia}</div>
-        <div class="stat-item"><b>Coef. Variação:</b> ${r.cv}%</div>
         <div class="stat-item"><b>Mediana:</b> ${r.mediana}</div>
+        <div class="stat-item"><b>Variância:</b> ${r.variancia}</div>
         <div class="stat-item"><b>Moda:</b> ${r.moda}</div>
+        <div class="stat-item"><b>Coef. Variação:</b> ${r.cv}%</div>
         <div class="stat-item"><b>Tamanho (n):</b> ${r.n}</div>
         <div class="stat-item"><b>Amplitude:</b> ${r.at}</div>
     `;
@@ -189,6 +192,7 @@ function renderUI(r) {
     tbodyAuditoria.innerHTML = r.itens_completos.map(item => 
         `<tr><td>${item.titulo}</td><td>${item.nota}</td><td>${item.ano}</td></tr>`
     ).join("");
+<<<<<<< HEAD:Teste1/static/script.js
 
     // Histograma
     const ctx = document.getElementById("histChart").getContext("2d");
@@ -252,4 +256,6 @@ chartO = new Chart(ctxO, {
 
 
 >>>>>>> ed3036d (terminando essa merda)
+=======
+>>>>>>> 933367b (projeto finalizado):VersãoAntiga/static/script.js
 }
