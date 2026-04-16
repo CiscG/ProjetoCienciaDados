@@ -84,6 +84,19 @@ def calcular_estatisticas_agrupadas(dados_brutos):
         
         inicio = fim
     
+    # =========================================================================
+    # ---> CORREÇÃO INSERIDA AQUI: Remoção de classes vazias no final <---
+    # =========================================================================
+    while len(fi) > 1 and fi[-1] == 0:
+        classes.pop()
+        fi.pop()
+        xi.pop()
+        fa.pop()
+        fi_xi.pop()
+        fi_xi2.pop()
+        k -= 1 # Ajusta o número de classes (K) para a realidade
+    # =========================================================================
+
     # Prevenção contra divisões por zero e cálculos de medidas de resumo
     media = sum(fi_xi) / n if n > 0 else 0
     
